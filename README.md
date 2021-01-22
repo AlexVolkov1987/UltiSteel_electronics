@@ -106,7 +106,7 @@ Electronics update for Ulti Steel 3D printer
 ```
 #-----------PINOUT-----------
 
-#EN		ar30	!FAN
+#EN	ar30	!FAN
 
 #STEP	ar36	FAN1
 
