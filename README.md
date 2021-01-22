@@ -36,67 +36,69 @@ Electronics update for Ulti Steel 3D printer
 
 #### Bigtreetech SKR 1.3
 
-`#-----------PINOUT-----------`
-`#EN		P0.10	!FAN`
+```
+#-----------PINOUT-----------
 
-`#STEP	P0.1	FAN1`
+#EN		P0.10	!FAN
 
-`#DIR	P0.0	FAN2`
+#STEP	P0.1	FAN1
 
-`#----------------------------`
+#DIR	P0.0	FAN2
 
-`#!FAN config as output pin`
+#----------------------------
 
-`#`
+#!FAN config as output pin
 
-`#[output_pin light]`
+#
 
-`#pin: P0.10`
+#[output_pin light]
 
-`#pwm: true`
+#pin: P0.10
 
-`#value: 0.5`
+#pwm: true
 
-`#shutdown_value: 1.0`
+#value: 0.5
 
-`#cycle_time: 0.01`
+#shutdown_value: 1.0
 
-`#----------------------------`
+#cycle_time: 0.01
 
-`#FAN1 config as output pin`
+#----------------------------
 
-`#`
+#FAN1 config as output pin
 
-`#[output_pin firstfan]`
+#
 
-`#pin: P0.1`
+#[output_pin firstfan]
 
-`#pwm: true`
+#pin: P0.1
 
-`#value: 0.5`
+#pwm: true
 
-`#shutdown_value: 1.0`
+#value: 0.5
 
-`#cycle_time: 0.01`
+#shutdown_value: 1.0
 
-`#----------------------------`
+#cycle_time: 0.01
 
-`#FAN1 config as generic fan`
+#----------------------------
 
-`#`
+#FAN1 config as generic fan
 
-`#[fan_generic firstfan]`
+#
 
-`#pin: P0.1`
+#[fan_generic firstfan]
 
-`#max_power: 1.0`
+#pin: P0.1
 
-`#shutdown speed: 1.0`
+#max_power: 1.0
 
-`#cycle_time: 0.01`
+#shutdown speed: 1.0
 
-`#----------------------------`
+#cycle_time: 0.01
 
+#----------------------------
+```
 
 
 #### MKS GenL V2
