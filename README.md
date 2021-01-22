@@ -103,7 +103,69 @@ Electronics update for Ulti Steel 3D printer
 
 #### MKS GenL V2
 
-printer.cfg
+```
+#-----------PINOUT-----------
+
+#EN		ar30	!FAN
+
+#STEP	ar36	FAN1
+
+#DIR	ar34	FAN2
+
+#----------------------------
+
+#!FAN config as output pin
+
+#
+
+#[output_pin light]
+
+#pin: ar30
+
+#pwm: true
+
+#value: 0.5
+
+#shutdown_value: 1.0
+
+#cycle_time: 0.01
+
+#----------------------------
+
+#FAN1 config as output pin
+
+#
+
+#[output_pin firstfan]
+
+#pin: ar36
+
+#pwm: true
+
+#value: 0.5
+
+#shutdown_value: 1.0
+
+#cycle_time: 0.01
+
+#----------------------------
+
+#FAN1 config as generic fan
+
+#
+
+#[fan_generic firstfan]
+
+#pin: ar36
+
+#max_power: 1.0
+
+#shutdown speed: 1.0
+
+#cycle_time: 0.01
+
+#----------------------------
+```
 
 ------
 
