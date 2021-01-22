@@ -55,13 +55,11 @@ Electronics update for Ulti Steel 3D printer
 
 #pin: P0.10
 
-#pwm: true
+#pwm: false
 
-#value: 0.5
+#value: 1.0
 
 #shutdown_value: 1.0
-
-#cycle_time: 0.01
 
 #----------------------------
 
@@ -122,13 +120,11 @@ Electronics update for Ulti Steel 3D printer
 
 #pin: ar30
 
-#pwm: true
+#pwm: false
 
-#value: 0.5
+#value: 1.0
 
 #shutdown_value: 1.0
-
-#cycle_time: 0.01
 
 #----------------------------
 
