@@ -39,7 +39,7 @@ Electronics update for Ulti Steel 3D printer
 ```
 #-----------PINOUT-----------
 
-#EN		P0.10	!FAN
+#EN	P0.10	!FAN
 
 #STEP	P0.1	FAN1
 
