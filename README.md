@@ -36,9 +36,8 @@ Electronics update for Ulti Steel 3D printer
 
 #### Bigtreetech SKR 1.3
 
-`#-----------PINOUT-----------
-
-#EN		P0.10	!FAN`
+`#-----------PINOUT-----------`
+`#EN		P0.10	!FAN`
 
 `#STEP	P0.1	FAN1`
 
