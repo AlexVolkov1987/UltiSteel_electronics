@@ -1,4 +1,410 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay:G5LE-1 K?
+U 1 1 6088E40B
+P 9800 2450
+F 0 "K?" V 10367 2450 50  0000 C CNN
+F 1 "G5LE-1" V 10276 2450 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 10250 2400 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 9800 2450 50  0001 C CNN
+	1    9800 2450
+	0    1    -1   0   
+$EndComp
+$Comp
+L Connector:AVR-ISP-6 J?
+U 1 1 6088F031
+P 1000 1250
+F 0 "J?" H 671 1346 50  0000 R CNN
+F 1 "AVR-ISP-6" H 671 1255 50  0000 R CNN
+F 2 "" V 750 1300 50  0001 C CNN
+F 3 " ~" H -275 700 50  0001 C CNN
+	1    1000 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 6088FE5E
+P 10650 1650
+F 0 "J?" H 10730 1692 50  0000 L CNN
+F 1 "220_OUT" H 10730 1601 50  0000 L CNN
+F 2 "" H 10650 1650 50  0001 C CNN
+F 3 "~" H 10650 1650 50  0001 C CNN
+	1    10650 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 608905C5
+P 8950 1650
+F 0 "J?" H 8868 1967 50  0000 C CNN
+F 1 "220 IN" H 8868 1876 50  0000 C CNN
+F 2 "" H 8950 1650 50  0001 C CNN
+F 3 "~" H 8950 1650 50  0001 C CNN
+	1    8950 1650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 2250 9500 1550
+Wire Wire Line
+	9500 1550 9150 1550
+Wire Wire Line
+	10100 2150 10100 1550
+Wire Wire Line
+	10100 1550 10450 1550
+Wire Wire Line
+	9150 1650 9700 1650
+Wire Wire Line
+	9150 1750 10450 1750
+Text Label 9250 1550 0    50   ~ 0
+L_I
+Text Label 9250 1650 0    50   ~ 0
+N
+Text Label 9250 1750 0    50   ~ 0
+E
+Text Label 10300 1550 0    50   ~ 0
+L_O
+$Comp
+L Converter_ACDC:IRM-03-5 PS?
+U 1 1 608956AE
+P 10300 1100
+F 0 "PS?" H 10300 1467 50  0000 C CNN
+F 1 "IRM-03-5" H 10300 1376 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_MeanWell_IRM-03-xx_THT" H 10300 750 50  0001 C CNN
+F 3 "https://www.meanwell.com/Upload/PDF/IRM-03/IRM-03-SPEC.PDF" H 10300 700 50  0001 C CNN
+	1    10300 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1200 9700 1200
+Wire Wire Line
+	9700 1200 9700 1650
+Connection ~ 9700 1650
+Wire Wire Line
+	9700 1650 10450 1650
+Wire Wire Line
+	9900 1000 9500 1000
+Wire Wire Line
+	9500 1000 9500 1550
+Connection ~ 9500 1550
+$Comp
+L power:GND #PWR?
+U 1 1 6089E4AB
+P 10800 1250
+F 0 "#PWR?" H 10800 1000 50  0001 C CNN
+F 1 "GND" H 10805 1077 50  0000 C CNN
+F 2 "" H 10800 1250 50  0001 C CNN
+F 3 "" H 10800 1250 50  0001 C CNN
+	1    10800 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6089E85B
+P 10800 950
+F 0 "#PWR?" H 10800 800 50  0001 C CNN
+F 1 "+5V" H 10815 1123 50  0000 C CNN
+F 2 "" H 10800 950 50  0001 C CNN
+F 3 "" H 10800 950 50  0001 C CNN
+	1    10800 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 1000 10700 1000
+Wire Wire Line
+	10800 1250 10800 1200
+Wire Wire Line
+	10800 1200 10700 1200
+Wire Wire Line
+	10800 1000 10800 950 
+$Comp
+L power:+5V #PWR?
+U 1 1 6089F07B
+P 9400 2600
+F 0 "#PWR?" H 9400 2450 50  0001 C CNN
+F 1 "+5V" H 9415 2773 50  0000 C CNN
+F 2 "" H 9400 2600 50  0001 C CNN
+F 3 "" H 9400 2600 50  0001 C CNN
+	1    9400 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 2650 9400 2650
+Wire Wire Line
+	9400 2650 9400 2600
+Wire Wire Line
+	10100 2650 10300 2650
+Text Label 10300 2650 0    50   ~ 0
+P_ON
+$Comp
+L MCU_Microchip_ATmega:ATmega164PA-AU U?
+U 1 1 608A66FC
+P 3900 3500
+F 0 "U?" H 3900 1411 50  0000 C CNN
+F 1 "ATmega164PA-AU" H 3900 1320 50  0000 C CNN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 3900 3500 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf" H 3900 3500 50  0001 C CNN
+	1    3900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 608A9220
+P 7850 3600
+F 0 "J?" H 7930 3592 50  0000 L CNN
+F 1 "POWER_BUTTON" H 7930 3501 50  0000 L CNN
+F 2 "" H 7850 3600 50  0001 C CNN
+F 3 "~" H 7850 3600 50  0001 C CNN
+	1    7850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 608AA174
+P 7850 3900
+F 0 "J?" H 7930 3892 50  0000 L CNN
+F 1 "POWER_LED" H 7930 3801 50  0000 L CNN
+F 2 "" H 7850 3900 50  0001 C CNN
+F 3 "~" H 7850 3900 50  0001 C CNN
+	1    7850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 608AA9FC
+P 7850 4250
+F 0 "J?" H 7930 4242 50  0000 L CNN
+F 1 "12/24 V_IN" H 7930 4151 50  0000 L CNN
+F 2 "" H 7850 4250 50  0001 C CNN
+F 3 "~" H 7850 4250 50  0001 C CNN
+	1    7850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 608AADF5
+P 10550 4650
+F 0 "J?" H 10630 4692 50  0000 L CNN
+F 1 "CMD_OUT" H 10630 4601 50  0000 L CNN
+F 2 "" H 10550 4650 50  0001 C CNN
+F 3 "~" H 10550 4650 50  0001 C CNN
+	1    10550 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 608AB496
+P 10550 6000
+F 0 "J?" H 10630 6042 50  0000 L CNN
+F 1 "CMD_IN" H 10630 5951 50  0000 L CNN
+F 2 "" H 10550 6000 50  0001 C CNN
+F 3 "~" H 10550 6000 50  0001 C CNN
+	1    10550 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:LTV-817 U?
+U 1 1 608ABA5D
+P 9250 5900
+F 0 "U?" H 9250 6225 50  0000 C CNN
+F 1 "LTV-817" H 9250 6134 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 9050 5700 50  0001 L CIN
+F 3 "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF" H 9250 5800 50  0001 L CNN
+	1    9250 5900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 608AE903
+P 9750 5800
+F 0 "R?" V 9650 5800 50  0000 C CNN
+F 1 "200" V 9750 5800 39  0000 C CNN
+F 2 "" H 9750 5800 50  0001 C CNN
+F 3 "~" H 9750 5800 50  0001 C CNN
+	1    9750 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 608AEDBA
+P 9750 5600
+F 0 "R?" V 9650 5600 50  0000 C CNN
+F 1 "100" V 9750 5600 39  0000 C CNN
+F 2 "" H 9750 5600 50  0001 C CNN
+F 3 "~" H 9750 5600 50  0001 C CNN
+	1    9750 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 608AFF24
+P 10550 5700
+F 0 "J?" H 10522 5632 50  0000 R CNN
+F 1 "CMD_V_SEL" H 10522 5723 50  0000 R CNN
+F 2 "" H 10550 5700 50  0001 C CNN
+F 3 "~" H 10550 5700 50  0001 C CNN
+	1    10550 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9650 5800 9600 5800
+Wire Wire Line
+	9650 5600 9600 5600
+Wire Wire Line
+	9600 5600 9600 5800
+Connection ~ 9600 5800
+Wire Wire Line
+	9600 5800 9550 5800
+Wire Wire Line
+	9900 5700 9900 5900
+Wire Wire Line
+	9900 5900 10350 5900
+Wire Wire Line
+	9550 6000 10350 6000
+Wire Wire Line
+	9850 5600 10350 5600
+Wire Wire Line
+	9900 5700 10350 5700
+Wire Wire Line
+	9850 5800 10350 5800
+Text Label 9950 5600 0    50   ~ 0
+3V3
+Text Label 9950 5700 0    50   ~ 0
+CMD_V_IN
+Text Label 9950 5800 0    50   ~ 0
+5V0
+$Comp
+L power:GND #PWR?
+U 1 1 608BD741
+P 8850 6050
+F 0 "#PWR?" H 8850 5800 50  0001 C CNN
+F 1 "GND" H 8855 5877 50  0000 C CNN
+F 2 "" H 8850 6050 50  0001 C CNN
+F 3 "" H 8850 6050 50  0001 C CNN
+	1    8850 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 6000 8850 6000
+Wire Wire Line
+	8850 6000 8850 6050
+$Comp
+L Device:R_Small R?
+U 1 1 608BE3B5
+P 8850 5600
+F 0 "R?" V 8750 5600 50  0000 C CNN
+F 1 "4k7" V 8850 5600 39  0000 C CNN
+F 2 "" H 8850 5600 50  0001 C CNN
+F 3 "~" H 8850 5600 50  0001 C CNN
+	1    8850 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 608BEEE2
+P 8850 5400
+F 0 "#PWR?" H 8850 5250 50  0001 C CNN
+F 1 "+5V" H 8865 5573 50  0000 C CNN
+F 2 "" H 8850 5400 50  0001 C CNN
+F 3 "" H 8850 5400 50  0001 C CNN
+	1    8850 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 5500 8850 5400
+Wire Wire Line
+	8850 5700 8850 5800
+Wire Wire Line
+	8850 5800 8950 5800
+Wire Wire Line
+	8850 5800 8500 5800
+Connection ~ 8850 5800
+Text Label 8500 5800 2    50   ~ 0
+CMD_IN
+$Comp
+L Isolator:LTV-817 U?
+U 1 1 608C106E
+P 9500 4650
+F 0 "U?" H 9500 4975 50  0000 C CNN
+F 1 "LTV-817" H 9500 4884 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 9300 4450 50  0001 L CIN
+F 3 "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF" H 9500 4550 50  0001 L CNN
+	1    9500 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 608C2053
+P 10100 4550
+F 0 "R?" V 10200 4550 50  0000 C CNN
+F 1 "4k7" V 10100 4550 39  0000 C CNN
+F 2 "" H 10100 4550 50  0001 C CNN
+F 3 "~" H 10100 4550 50  0001 C CNN
+	1    10100 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10350 4550 10200 4550
+Wire Wire Line
+	9800 4550 9900 4550
+Wire Wire Line
+	9900 4550 9900 4650
+Wire Wire Line
+	9900 4650 10350 4650
+Connection ~ 9900 4550
+Wire Wire Line
+	9900 4550 10000 4550
+Wire Wire Line
+	9800 4750 10350 4750
+Text Label 10300 4550 2    50   ~ 0
+V
+Text Label 10300 4650 2    50   ~ 0
+S
+Text Label 10300 4750 2    50   ~ 0
+G
+$Comp
+L power:GND #PWR?
+U 1 1 608C9A95
+P 9100 4850
+F 0 "#PWR?" H 9100 4600 50  0001 C CNN
+F 1 "GND" H 9105 4677 50  0000 C CNN
+F 2 "" H 9100 4850 50  0001 C CNN
+F 3 "" H 9100 4850 50  0001 C CNN
+	1    9100 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 4750 9100 4750
+Wire Wire Line
+	9100 4750 9100 4850
+$Comp
+L Device:R_Small R?
+U 1 1 608CA8FF
+P 9000 4550
+F 0 "R?" V 8900 4550 50  0000 C CNN
+F 1 "200" V 9000 4550 39  0000 C CNN
+F 2 "" H 9000 4550 50  0001 C CNN
+F 3 "~" H 9000 4550 50  0001 C CNN
+	1    9000 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8900 4550 8500 4550
+Wire Wire Line
+	9200 4550 9100 4550
+Text Label 8500 4550 2    50   ~ 0
+CMD_OUT
 $EndSCHEMATC
