@@ -1173,7 +1173,7 @@ U 1 1 609F8AAE
 P 1750 1450
 F 0 "J1" H 1320 1496 50  0000 R CNN
 F 1 "AVR-JTAG-10" H 1320 1405 50  0000 R CNN
-F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" V 1600 1600 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" V 1600 1600 50  0001 C CNN
 F 3 " ~" H 475 900 50  0001 C CNN
 	1    1750 1450
 	1    0    0    -1  
